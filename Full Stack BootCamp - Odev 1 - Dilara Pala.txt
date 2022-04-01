@@ -1,0 +1,69 @@
+Full Stack Bootcamp – Ödev1 - Dilara PALA
+
+1. Bridge Design Pattern
+
+	Bridge Design Pattern; bir yapýsal design patternidir. Bu design pattern büyük sýnýflarý veya yakýn iliþkiye sahip sýnýflarý abstraction ve implementation kullanarak bölmeye yarar. 
+
+Örneðin; bir cihaz classýmýz olsun. Bu classýn bilgisayar, telefon ve tablet olarak 3 subclassý olsun. Her subclass için start, shutdown, restart methodlarý olsun. Yeni bir method eklemek istediðimizde her subclassa ayrý ayrý eklemek zorunda kalýrýz. Bunu yapmamak için bridge design pattern’ý kullanýp device ve implementation olarak ikiye böleriz. Bu þekilde yeni bir method eklemek istediðimiz zaman subclasslarýmýza dokunmadan ekleme yapabiliriz.
+
+Yazmýþ olduðum örnek kodu paylaþtým.
+
+
+2. Facade Design Pattern
+
+	Facade Design Pattern’da yapýsal design patternidir. Karmaþýk bir sistemi basit hale indirgeyebilmek için Facade (Cephe) design pattern’ýný kullanabiliriz. 
+
+Örnek verecek olursam; bir banka uygulamasýndan hesap açmak istiyoruz. Burada yapmamýz gereken þey hesap açma isteðimizi bakaya ileten butona basmaktýr. Sistemin arka planýnda banka tarafýmýzla ilgili araþtýrma yapar, dokümanlarý ve kayýtlar oluþturur ve þartlar uygunsa hesap açýlýr. Biz arka plandaki bu süreçlerin nasýl iþlediðini görmeyiz. 
+
+Facade Design Pattern kullanarak bu karmaþýk özellikler gizlenir.
+
+Yazmýþ olduðum örnek kodu paylaþtým.
+
+3. SOLID Prensipleri
+
+	SOLID prensipleri; farklý zamanlarda keþfedilmiþ ve bir araya getirilmiþ nesne tabanlý programlama prensipleridir. 
+SOLID;
+* Single Responsibility Principle (Tek Sorumluluk Ýlkesi)
+* Open-Closed Principle (Açýk-Kapalý Ýlkesi)
+* Liskov Substitution Principle (Liskov’un Yer Deðiþtirme Ýlkesi)
+* Interface Segregation Principle (Arayüz Ayrýmý Ýlkesi)
+* Dependency Inversion Principle (Baðýmlýlýðý Tersine Çevirme Ýlkesi) 
+Prensiplerinin baþ harflerinden oluþmaktadýr.
+
+
+Detaylý inceleyecek olursak:
+
+1. Single Responsibility Principle (Tek Sorumluluk Ýlkesi)
+	Bu prensibe göre bir sýnýf yalnýzca bir iþten sorumlu olmalýdýr. 
+Yazmýþ olduðum örnek kodu paylaþtým.
+
+2. Open-Closed Principle (Açýk-Kapalý Ýlkesi)
+	Bu prensibe göre bir sýnýf yeni özelliklerin eklenmesine açýk, yeni özellik eklerken hali hazýrda sunulan özelliklerin deðiþtirilmesine kapalý olmalýdýr. Yani tasarlanan sýnýfa yeni özellik eklerken sýnýfta köklü deðiþiklikler yapýlmayacak þekilde tasarlanmalýdýr. Bu þekilde sýnýfýn geliþtirilebilir ve geniþletilebilir olmasý saðlanýr. 
+
+3. Liskov Substitution Principle (Liskov’un Yer Deðiþtirme Ýlkesi)
+	Bu prensipte bir alt sýnýf, türetildiði üst sýnýfýn yerine geçebilir. Yani alt sýnýf üst sýnýfýn saðladýðý bütün özellikleri saðlayabilmelidir. 
+Sýnýflarý hayvanlarýn sýnýflandýrýlmasýna benzetirsek, bu prensibin saðlanmadýðý sýnýfa örnek olarak kuþ sýnýfýnýn alt türü olan tavuk sýnýfýný verebililiriz. Çünkü kuþ sýnýfýnda uçma özelliði varken tavuk sýnýfýnda yoktur. 
+
+4. Interface Segretion Principle (Arayüz Ayrýmý Ýlkesi)
+	Ýsteme özel birçok ara yüz, tek bir genel amaçlý ara yüzden daha iyidir. 
+ISP’de sýnýflar kullanmadýklarý davranýþlarý içermesi istenmez.
+ Aslýnda, bu durum ilk SOLID ilkemizle de ilgilidir. Çünkü, bu ilke programa doðrudan katkýda bulunmayan tüm deðiþkenleri, metotlarý veya davranýþlarý bir sýnýftan çýkarýr. 
+Bu sayede;
+•	 Daha az kod taþýyan metotlar elde edilir. Kodun ihtiyaç durumunda güncellemesi hýzlanýr.
+•	 Davranýþtan bir metot sorumlu olduðu için davranýþta karþýlaþýlan problem hýzlý çözülür.
+
+5. Dependency Inversion Principle (Baðýmlýlýðý Tersine Çevirme Ýlkesi)
+	Abstraction (Soyutlama) konusu sýnýf ve doðru özelliklerin sýnýfa eklenmesi açýsýndan Nesneye Yönelik Programlama’nýn en önemli konularýndan biridir. 
+DIP iki kýsma sahiptir:
+
+* Yüksek seviyeli modüller, düþük seviyeli modüllere baðlý olmamalýdýr. Bunun yerine, her ikisi de soyutlamalara (Interface) baðlý olmalýdýr.
+* Soyutlamalar ayrýntýlara baðlý olmamalýdýr. Ayrýntýlar (somut uygulamalar gibi) soyutlamalara baðlý olmalýdýr.
+
+		Yazýlýmcýlar, konuyu parça parça öðrendikleri için sýnýflarýný yüklenirler. Bir anlamda yüksek seviyeli bileþenlere sahip programlar yazarlar. DIP ilkesinin amacý düþük ve yüksek seviyeli bileþenleri ayýrýp her ikisini de soyutlamalara baðlamaktýr. 
+	Bu durumda, yüksek ve düþük seviyeli bileþenler birbirinden yararlanabilir ama birindeki deðiþiklik doðrudan diðerini etkilememelidir.
+
+		Diyelim ki bir barýnak sýnýfý var ve bu sýnýfýn içinde kedi ve köpek sýnýflarýndan nesne tutuyoruz. Barýnak sýnýfýnýn içinde kedi ve köpekleri besle methodlarý olsun. Bu durumda barýnak üst seviye sýnýf olduðu halde alt seviye olan kedi ve köpek sýnýflarýna baðýmlýdýr. 
+	Bu probleme baðýmlýlýðý tersine çevirme ilkesini uygulamak için, önce soyutlama katmaný yani evcil hayvan sýnýfýný oluþturup kedi ve köpek sýnýflarýný bu sýnýftan türetiriz. Yani onlarý soyutlama sýnýfýna baðýmlý hale getiririz. 
+	Daha sonra barýnak sýnýfýnda kedi ve köpek sýnýflarý ile tuttuðumuz nesneleri kaldýrýp evcil hayvan türünden bir liste tutarak Barýnak sýnýfýnýn alt sýnýflara olan baðýmlýlýðýný kaldýrýp soyutlama katmanýna baðýmlý hale getirmiþ oluruz. Özetle daha önce kedi ve köpek sýnýflarýndan ayrý ayrý çaðrýlan besle metodunu, barýnak sýnýfý içinde bulunan evcil hayvan listesi üzerinde kuracaðýmýz bir döngü ile kurabiliriz.
+Ýlk halde barýnak metodu kedi sýnýfýna baðýmlýyken ikinci durumda kedi sýnýfý bir soyutlama sýnýfýna baðýmlý hale geldiðinden kedi sýnýfý için baðýmlýlýðý tersine çevirmiþ olduk.
+	Bu yapý ile, barýnak sýnýfý artýk alt sýnýf türünde bir sýnýfa baðlý olmadýðýndan yeni eklenecek evcil hayvan türleri için barýnak sýnýfýnda deðiþiklik yapmadan her tür evcil hayvanýn beslenebilmesini saðlamýþ olduk.

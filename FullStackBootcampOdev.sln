@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDExample", "SOLIDExampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadeDesignPattern", "FacadeDesignPattern\FacadeDesignPattern.csproj", "{73F22EA1-97BB-4B6E-AD70-1C646D846976}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5292CC21-6ACA-4A28-B7D0-513EF4FD52C7}"
+	ProjectSection(SolutionItems) = preProject
+		Full Stack BootCamp - Odev 1 - Dilara Pala.txt = Full Stack BootCamp - Odev 1 - Dilara Pala.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
